@@ -1,0 +1,191 @@
+@font-face {
+font-family: 'Roboto', sans-serif;
+}
+@font-face {
+font-family: 'Shrikhand', cursive;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  font-family: 'Roboto';
+}
+
+$test: #ff0000;
+
+// @media screen and (max-width: 600px) {
+
+.dp_bloc-page {
+  overflow: hidden !important;
+}
+
+.dp_header {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  min-height: 10vh;
+  position: relative;
+  box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
+  color: #ff0000
+
+
+}
+
+.dp_header_logo {
+  width: 50vw;
+}
+.dp_under-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F2F2F2;
+  padding-bottom: 60px;
+}
+
+.dp_under-header-loc {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  background-color: #E0E0E0;
+
+}
+
+.dp_under-header-loctxt {
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+.fa-map-marker-alt::before {
+  height: 50px;
+  margin-left: 30vw;
+  margin-right: 15px;
+}
+
+.dp_under-header-title {
+  text-align: center;
+  padding: 15px;
+}
+.dp_under-header-h1 {
+  font-family: 'Roboto';
+  font-size: 25px;
+}
+
+.dp_under-header-h1 {
+  font-family: 'Roboto';
+  font-size: 25px;
+
+}
+
+.dp_under-header-h2 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.dp_under-header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  background: rgb(255,121,218);
+  background: linear-gradient(162deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+  width: 50%;
+  border-radius: 50px;
+  box-shadow: inset -1px 3px 8px 5px #0000, 2px 5px 16px 0px #0000, 10px 11px 24px 1px rgba(0,0,0,0.26);
+  &:hover {
+    background: rgb(255,121,218);
+    background: linear-gradient(162deg, rgba(255,121,218,1) 0%, rgba(147,86,220,0.65) 100%);
+  }
+}
+
+
+
+.dp_under-header-button {
+
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+
+}
+
+.dp_fonction {
+  margin-top: 50px;
+  padding: 15px;
+}
+
+.dp_fonction-h2 {
+  margin-left: 15px;
+}
+.dp_fonction-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+}
+
+.dp_fonction-choice {
+  display: flex;
+  align-items: center;
+  background-color: #F2F2F2;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
+}
+
+.dp_fonction-btn-numbers {
+  margin-left: -35px;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  background-color: #9356DC ;
+  color: white;
+  border-radius: 150px;
+  margin-right: 20px;
+}
+
+.dp_numbers {
+  align-self: center;
+}
+
+.fa-mobile-alt {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.fa-list-ul {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.fa-store {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.dp_fonction-btn-txt {
+  margin-left: 15px;
+}
+
+.dp_main-restaurants {
+  padding: 15px;
+  background-color: #f2f2f2;
+}
+
+.dp_main-restaurants-bloc-vignette {
+  width: 90%;
+  min-height: 300px;
+  background: url('/Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+}
