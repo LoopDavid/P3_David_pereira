@@ -18,8 +18,20 @@ p {
   font-family: 'Roboto';
 }
 
-$test: #ff0000;
+li {
+   list-style-type: none;
+}
+$white: #fff;
+$new: #99E2D0;
+$new-txt: #1C9879;
+$primary: #9356DC;
+$secondary: #FF79DA;
 
+
+@mixin raduis-shadow {
+  border-radius: 5px;
+  box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
+}
 // @media screen and (max-width: 600px) {
 
 .dp_bloc-page {
@@ -35,35 +47,34 @@ $test: #ff0000;
   min-height: 10vh;
   position: relative;
   box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
-  color: #ff0000
-
-
+  color: #ff0000;
+  .dp_header_logo {
+    width: 50vw;
+  }
 }
 
-.dp_header_logo {
-  width: 50vw;
-}
+
 .dp_under-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #F2F2F2;
   padding-bottom: 60px;
+  .dp_under-header-loc {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    background-color: #E0E0E0;
+    .dp_under-header-loctxt {
+      font-family: 'Roboto';
+      font-weight: 500;
+    }
+  }
 }
 
-.dp_under-header-loc {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  align-items: center;
-  background-color: #E0E0E0;
 
-}
 
-.dp_under-header-loctxt {
-  font-family: 'Roboto';
-  font-weight: 500;
-}
 
 .fa-map-marker-alt::before {
   height: 50px;
@@ -119,7 +130,7 @@ $test: #ff0000;
 }
 
 .dp_fonction {
-  margin-top: 50px;
+  margin-top: 15px;
   padding: 15px;
 }
 
@@ -185,7 +196,45 @@ $test: #ff0000;
 }
 
 .dp_main-restaurants-bloc-vignette {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
   width: 90%;
   min-height: 300px;
-  background: url('/Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+  margin-top: 25px;
+  border-radius: 18px;
+}
+
+.dp_main-restaurants-bloc-vignette-txt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  .dp_main-restaurants-bloc-vignette-txt-loc {
+    width: 80%;
+  }
+}
+
+.dp_main-img {
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0 ;
+}
+
+.dp_new {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: .5rem;
+  top: 1rem;
+  right: 1rem;
+  background-color: $new;
+  width: 4.5rem;
+  height: 1rem;
+  font-size: 15px;
+  @include raduis-shadow;
+  color: $new-txt;
+  font-weight: 500;
 }
