@@ -26,7 +26,7 @@ $new: #99E2D0;
 $new-txt: #1C9879;
 $primary: #9356DC;
 $secondary: #FF79DA;
-
+$footer: #353535;
 
 @mixin raduis-shadow {
   border-radius: 5px;
@@ -94,7 +94,6 @@ $secondary: #FF79DA;
 .dp_under-header-h1 {
   font-family: 'Roboto';
   font-size: 25px;
-
 }
 
 .dp_under-header-h2 {
@@ -122,11 +121,9 @@ $secondary: #FF79DA;
 
 
 .dp_under-header-button {
-
   font-weight: 500;
   font-size: 15px;
   color: white;
-
 }
 
 .dp_fonction {
@@ -136,12 +133,13 @@ $secondary: #FF79DA;
 
 .dp_fonction-h2 {
   margin-left: 15px;
+  font-family: 'Roboto';
 }
+
 .dp_fonction-btn {
   display: flex;
   flex-direction: column;
   padding: 15px;
-
 }
 
 .dp_fonction-choice {
@@ -152,7 +150,17 @@ $secondary: #FF79DA;
   padding: 15px;
   margin: 10px;
   box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
+
 }
+
+.dp_fonction-choice:hover {
+  background-color: #F5EDFF;
+  transition: 0.4s;
+}
+
+.dp_fonction-choice:hover .fas {
+    color: #9356DC;
+  }
 
 .dp_fonction-btn-numbers {
   margin-left: -35px;
@@ -193,6 +201,16 @@ $secondary: #FF79DA;
 .dp_main-restaurants {
   padding: 15px;
   background-color: #f2f2f2;
+  padding-bottom: 50px;
+}
+
+.dp_restaurants-h2 {
+  font-family: 'Roboto';
+}
+
+.dp_main-h3 {
+  font-family: 'Roboto';
+  height: 10px;
 }
 
 .dp_main-restaurants-bloc-vignette {
@@ -200,26 +218,41 @@ $secondary: #FF79DA;
   flex-direction: column;
   position: relative;
   background-color: white;
-  width: 90%;
-  min-height: 300px;
+  width: 100%;
+  height: 250px;
   margin-top: 25px;
   border-radius: 18px;
+
 }
+
+.dp_main-restaurants-bloc-vignette:hover {
+    opacity: 0.75;
+    transform: scale(1.01);
+    transition: 0.4s;
+
+  }
 
 .dp_main-restaurants-bloc-vignette-txt {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem;
+  padding-left: 1rem;
+  height: 70px;
   .dp_main-restaurants-bloc-vignette-txt-loc {
     width: 80%;
+    padding-bottom: 10px;
   }
 }
 
 .dp_main-img {
   object-fit: cover;
   overflow: hidden;
+  object-position: 50% 90%;
   border-radius: 18px 18px 0 0 ;
+}
+
+.dp_img_lanote {
+  object-position: 50% 60%;
 }
 
 .dp_new {
@@ -237,4 +270,48 @@ $secondary: #FF79DA;
   @include raduis-shadow;
   color: $new-txt;
   font-weight: 500;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  height: 30vh;
+  background-color: $footer;
+  color: white;
+  a {
+    font-weight: 300;
+    margin-left: 0;
+    font-size: 18px;
+    color: white;
+    }
+  }
+
+  .a_roboto {
+    font-family: 'Roboto';
+    line-height: 2rem;
+  .fas {
+    width: 20px;
+    margin-right: 10px;
+    }
+  }
+
+  .dp_logo-footer {
+    font-size: 18px;
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    margin: 0;
+    height: 75px;
+  }
+
+
+
+
+.dp_footer_link_logo {
+  font-weight: 500;
+}
+
+.fa-heart .heart_nobg {
+  display: none;
 }
