@@ -116,8 +116,19 @@ body {
 
 
 
+footer {
+  .dp_logo-footer {
+    display: flex;
+    justify-content: center;
+    .dp_footer_logo {
+      font-size: 3rem;
+    }
+  }
 
+}
+.dp_footer-link {
 
+}
 }
 
 @media screen
@@ -160,7 +171,9 @@ body {
       margin: 0;
       margin-top: 15px;
     }
-
+    .dp_img_header {
+      max-height: 17rem;
+    }
   }
 
 
@@ -444,11 +457,25 @@ footer {
 
 // specifique pages
 
+._header-pages {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.arrow_back {
+  position: absolute;
+  left: 2rem;
+
+  font-size: 1.5rem;
+}
+
 .dp_img_header {
   object-fit: cover;
   overflow: hidden;
-  box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
-
+  @include radius-shadow;
+  border-radius: 0;
 }
 
 .dp_under_page {
@@ -468,11 +495,9 @@ footer {
       font-family: 'Shrikhand';
       margin-bottom: 0;
     }
-    .dp_img_header {
-      object-position: 50% 20%;
-    }
     .dp-heart {
       position: relative;
+      background-color: $grey;
     }
   }
 }
