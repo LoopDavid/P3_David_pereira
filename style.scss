@@ -406,8 +406,22 @@ footer {
   }
 
   .heart-nobg:hover {
-    color: linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
+    opacity: 0;
+    // color: linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
   }
+
+  .heart-bg:hover {
+    opacity: 0;
+    background: linear-gradient(to top, #FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    color: transparent;
+    transform-origin: bottom;
+    transform: scale(0);
+  }
+
+
+
+
 
   .fa-heart:hover {
 
@@ -429,14 +443,16 @@ footer {
 .dp_main-img {
   object-fit: cover;
   overflow: hidden;
-  object-position: 50% 90%;
+  object-position: 50% 60%;
   border-radius: 18px 18px 0 0 ;
 }
 
 .dp_img_lanote {
   object-position: 50% 60%;
 }
-
+.dp_img_french {
+  object-position: 50% 100%;
+}
 .dp_new {
   display:flex;
   align-items: center;
