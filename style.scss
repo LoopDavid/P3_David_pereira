@@ -28,6 +28,7 @@ $primary: #9356DC;
 $secondary: #FF79DA;
 $footer: #353535;
 $grey: #F2F2F2;
+$gradients: 162deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%;
 
 @mixin radius-shadow {
   border-radius: 5px;
@@ -162,6 +163,14 @@ footer {
     justify-content: center;
     padding-right: 15px;
   }
+
+  .dp-heart .fa-heart{
+    left: 6rem;
+  }
+
+  footer {
+    height: 20vh;
+  }
 }
 
 @media screen
@@ -184,12 +193,92 @@ footer {
     .dp_img_header {
       max-height: 17rem;
     }
+
+    footer {
+      height: 30vh;
+    }
   }
 
 // CSS general
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $grey;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  z-index: 11;
+  // animation-fill-mode: backwards;
+}
+
+.letters {
+  font-family: 'Shrikhand';
+  font-size: 3rem;
+  animation: scaling 4s ease-out infinite;
+}
+
+@keyframes scaling {
+  0%, 100%{
+    transform: scale(0.2);
+    color: $primary;
+  }
+
+  50% {
+    transform:scale(1);
+    color: $secondary;
+  }
+}
+
+
+.letters:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.letters:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.letters:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.letters:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.letters:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.letters:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.letters:nth-child(7) {
+  animation-delay: 1s;
+}
+
+.letters:nth-child(8) {
+  animation-delay: 1s;
+}
+
+.letters:nth-child(9) {
+  animation-delay: 1.5s;
+}
+
+.letters:nth-child(10) {
+  animation-delay: 1.9s;
+}
+
+.letters:nth-child(11) {
+  animation-delay: 2.1s;
+}
 
 
 .dp_bloc-page {
+  width: 100%;
+  height: 100%;
   overflow: hidden !important;
 }
 
@@ -303,12 +392,13 @@ footer {
   margin: 10px;
   box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
   cursor: grab;
+  &.dp_fonction-choice:hover {
+    background-color: #f5edff !important;
+    transition: 0.4s;
+  }
 }
 
-.dp_fonction-choice:hover {
-  background-color: #F5EDFF;
-  transition: 0.4s;
-}
+
 
 .dp_fonction-choice:hover .fas {
     color: #9356DC;
@@ -401,27 +491,30 @@ footer {
   .fa-heart {
     position: absolute;
     font-size: 1.8rem;
+    transition: .4s;
 
     }
   }
 
-  .heart-nobg:hover {
+.dp-heart:hover .heart_nobg{
     opacity: 0;
-    // color: linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
   }
 
-  .heart-bg:hover {
-    opacity: 0;
-    background: linear-gradient(to top, #FF79DA, #9356DC);
+.dp-heart:hover .heart-bg {
+    // opacity: 0;
+
+    transition: all 0.6s ease-out;
+    background:-moz-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+    background: -webkit-linear-gradient(top, #e72c83 0%,#a742c6 100%);
+    background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%);
     -webkit-background-clip: text;
-    color: transparent;
-    transform-origin: bottom;
-    transform: scale(0);
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
+    // -webkit-background-clip: text;
+    // transform-origin: bottom;
+    // transform: scale(0);
   }
-
-
-
-
 
   .fa-heart:hover {
 
@@ -429,13 +522,27 @@ footer {
      color: rgb(255,121,218);
      color: linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
      background-color: #FFF;
-     border-radius: 50%;
-     transition: color .5s ease-out;
+
+     transition: all 0.6s ease-out;
+
     }
 
+
+
+
+
+
+
+
+
 .dp_under_page {
-  .fa-heart:hover {
+  .fa-heart:hover .heart_nobg{
+    opacity: 0;
+
     background-color: #F2F2F2;
+  }
+  .fa-heart:hover .heart-bg {
+    opacity: 1;
   }
 }
 
@@ -475,7 +582,7 @@ footer {
   flex-direction: column;
   padding-left: 30px;
   padding-bottom: 30px;
-  height: 30vh;
+
   background-color: $footer;
   color: white;
   a {
@@ -592,15 +699,25 @@ footer {
   border-radius: 1rem;
   padding: 1rem;
   margin-top: 1rem;
-  .__card-txt {
-    width: 75%;
-
-  }
+  overflow: hidden;
   .__price {
     align-self: flex-end;
     margin: 0 auto;
     font-weight: 900;
   }
+}
+
+.__card-txt {
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80%
+}
+
+.__card-txt, .__h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .__h4 {
@@ -609,8 +726,11 @@ footer {
 }
 .__menu-p {
   margin: 0;
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .__check {
@@ -621,4 +741,21 @@ footer {
   font-size: 1.5rem;
   background-color: $new;
   margin: -1rem -5rem -1rem 1rem;
+  transition: .8s;
+  width: 4rem;
+}
+
+
+.__card:hover .__check {
+  margin-right: -1rem;
+  // transform: translateX(-4rem);
+}
+
+.fa-check-circle {
+  transform: rotate(180deg);
+}
+
+.fa-check-circle {
+  animation-delay: .4ms;
+  transform: rotate(-180deg);
 }
