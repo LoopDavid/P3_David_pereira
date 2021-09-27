@@ -159,9 +159,8 @@ footer {
     }
   .dp_fonction-btn {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-right: 15px;
+    justify-content: space-evenly;
+    width: 100%;
   }
 
   .dp-heart .fa-heart{
@@ -200,8 +199,10 @@ footer {
   }
 
 // CSS general
+
+// ********************** loader **************
 .loader {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: $grey;
@@ -209,13 +210,37 @@ footer {
   justify-content:center;
   align-items: center;
   z-index: 11;
-  // animation-fill-mode: backwards;
+  overflow: hidden;
+  animation: loader 4s linear;
+  animation-fill-mode: both;
 }
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    z-index: -12;
+  }
+}
+
 
 .letters {
   font-family: 'Shrikhand';
   font-size: 3rem;
-  animation: scaling 4s ease-out infinite;
+  animation: scaling 2.5s ease-out;
+  animation-fill-mode: both;
 }
 
 @keyframes scaling {
@@ -275,18 +300,21 @@ footer {
   animation-delay: 2.1s;
 }
 
+// ****** fin du loader **************
+
 
 .dp_bloc-page {
   width: 100%;
   height: 100%;
   overflow: hidden !important;
+  animation-delay: 2.5s;
 }
 
 .dp_header {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+
   min-height: 10vh;
   position: relative;
   box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
@@ -627,7 +655,6 @@ footer {
   display: flex;
   align-items: center;
   position: relative;
-
 }
 
 .arrow_back {
@@ -707,6 +734,36 @@ footer {
   }
 }
 
+// **** card animation*******
+
+.__card {
+  animation: menu 0.8s ease;
+}
+
+.__card:nth-child(0) {
+  animation-delay: 0s;
+}
+.__card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.__card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.__card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes menu {
+0% {
+  transform: scale(0);
+}
+100% {
+  transform: scale(1);
+}
+}
+
+
+
 .__card-txt {
   flex: 1;
   text-overflow: ellipsis;
@@ -751,11 +808,13 @@ footer {
   // transform: translateX(-4rem);
 }
 
-.fa-check-circle {
+.__check-rotate {
   transform: rotate(180deg);
+  transition-duration: .8s;
 }
 
-.fa-check-circle {
-  animation-delay: .4ms;
-  transform: rotate(-180deg);
+.__card:hover .__check-rotate{
+  // animation-delay: .4ms;
+  transform: rotate(0);
+
 }
