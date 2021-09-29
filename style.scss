@@ -35,6 +35,10 @@ $gradients: 162deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%;
   box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
 }
 
+@mixin shadow {
+  box-shadow: -1px 5px 13px 0px rgba(0,0,0,0.21);
+}
+
 @mixin btn {
   display: flex;
   justify-content: center;
@@ -212,7 +216,7 @@ footer {
     }
 
     footer {
-      height: 30vh;
+      
     }
   }
 
@@ -222,6 +226,7 @@ footer {
 .loader {
   position: fixed;
   width: 100%;
+  max-width: 1440px;
   height: 100%;
   background-color: $grey;
   display: flex;
@@ -239,7 +244,7 @@ footer {
   }
 
   60% {
-    opacity: 0.95;
+    opacity: 0.9;
   }
   80% {
     opacity: 0.5;
@@ -557,9 +562,9 @@ footer {
     -moz-background-clip: text;
     background-clip: text;
    -webkit-text-fill-color:transparent;
-    // -webkit-background-clip: text;
-    // transform-origin: bottom;
-    // transform: scale(0);
+    -webkit-background-clip: text;
+    transform-origin: bottom;
+
   }
 
   .fa-heart:hover {
@@ -746,6 +751,7 @@ footer {
   padding: 1rem;
   margin-top: 1rem;
   overflow: hidden;
+  @include shadow;
   .__price {
     align-self: flex-end;
     margin: 0 auto;
@@ -757,22 +763,42 @@ footer {
 
 
 // **** card animation*******
-
-.__menu-card {
+.__card {
   animation: menu 0.8s ease;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-fill-mode: none;
 }
 
-.__card:nth-child(0) {
-  animation-delay: 3s;
+.anim-delay-0 {
+  animation-delay: 1.6s;
 }
-.__card:nth-child(1) {
-  animation-delay: 3.1s;
+.anim-delay-1 {
+  animation-delay: 1.7s;
 }
-.__card:nth-child(2) {
-  animation-delay: 3.2s;
+.anim-delay-2 {
+  animation-delay: 1.8s;
 }
-.__card:nth-child(3) {
-  animation-delay: 3.3s;
+.anim-delay-3 {
+  animation-delay: 1.9s;
+}
+.anim-delay-4 {
+  animation-delay: 2s;
+}
+.anim-delay-5{
+  animation-delay: 2.1s;
+}
+.anim-delay-6 {
+  animation-delay: 2.2s;
+}
+.anim-delay-7 {
+  animation-delay: 2.3s;
+}
+.anim-delay-8 {
+  animation-delay: 2.4s;
+}
+.anim-delay-9 {
+  animation-delay: 2.5s;
 }
 
 @keyframes menu {
