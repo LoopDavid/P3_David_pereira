@@ -1,10 +1,3 @@
-@font-face {
-font-family: 'Roboto', sans-serif;
-}
-@font-face {
-font-family: 'Shrikhand', cursive;
-}
-
 body {
   margin: 0;
   font-family: 'Roboto';
@@ -132,7 +125,7 @@ body {
   overflow: hidden;
   margin: 10px;
 }
-.__card {
+.dp_menu-card {
   box-shadow: -1px 5px 5px 0px rgba(0,0,0,0.21);
   margin: 1rem 0.3rem;
 }
@@ -179,8 +172,20 @@ footer {
     padding: 15px 30px 15px 30px !important;
   }
 
+  .dp_main-restaurants-bloc {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .dp_main-restaurants-bloc-vignette {
+    width: 45% !important;
+    margin: 10px 10px;
+  }
+
   .dp-heart .fa-heart{
-    left: 6rem;
+    left: 0;
   }
 
   .dp_bloc-menu {
@@ -193,7 +198,7 @@ footer {
     margin: 10px;
   }
 
-  .__card {
+  .dp_menu-card {
     box-shadow: -1px 5px 5px 0px rgba(0,0,0,0.21);
     margin: 1rem 0.3rem;
   }
@@ -223,7 +228,7 @@ footer {
       max-height: 17rem;
     }
 
-    .__card {
+    .dp_menu-card {
       @include shadow;
     }
     footer {
@@ -418,7 +423,7 @@ footer {
   color: white;
 }
 
-.__center-btn {
+.dp_center-btn {
   margin-top: 2rem;
   margin-bottom: 5rem;
   display: flex;
@@ -576,30 +581,14 @@ footer {
    -webkit-text-fill-color:transparent;
     -webkit-background-clip: text;
     transform-origin: bottom;
-
   }
 
   .fa-heart:hover {
-
      font-weight: bold;
-     color: rgb(255,121,218);
-     color: linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
-     color: -moz-linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
-     color: -webkit-linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
-
-
+     background: linear-gradient(10deg,$primary,$secondary);
      background-color: #FFF;
-
      transition: all 0.6s ease-out;
-
     }
-
-
-
-
-
-
-
 
 
 .dp_under_page {
@@ -612,7 +601,6 @@ footer {
     opacity: 1;
   }
 }
-
 
 .dp_main-img {
   object-fit: cover;
@@ -739,7 +727,7 @@ footer {
   background-color: $grey;
   padding: 1.5rem;
 
-  ._h3-menu {
+  .dp_h3-menu {
     text-transform: uppercase;
     font-family: 'Roboto';
     position: relative;
@@ -747,7 +735,7 @@ footer {
     font-weight: 300;
 
   }
-  ._h3-menu::after {
+  .dp_h3-menu::after {
     content: "";
     width: 3.5rem;
     height: 0.30rem;
@@ -758,7 +746,7 @@ footer {
   }
 }
 
-.__card {
+.dp_menu-card {
   display: flex;
   align-content: center;
   flex-direction: row;
@@ -769,7 +757,7 @@ footer {
   margin-bottom: 1rem;
   overflow: hidden;
   cursor: pointer;
-  .__price {
+  .dp_menu_price {
     align-self: flex-end;
     margin: 0 auto;
     font-weight: 900;
@@ -780,7 +768,7 @@ footer {
 
 
 // **** card animation*******
-.__card {
+.dp_menu-card {
   animation: menu 0.8s ease;
   animation-timing-function: ease;
   animation-delay: 0s;
@@ -829,24 +817,24 @@ footer {
 
 
 
-.__card-txt {
+.dp_menu-card-txt {
   flex: 1;
   text-overflow: ellipsis;
   overflow: hidden;
   width: 80%
 }
 
-.__card-txt, .__h4 {
+.dp_menu-card-txt, .dp_menu_h4 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.__h4 {
+.dp_menu_h4 {
   font-weight: 900;
   margin: 0;
 }
-.__menu-p {
+.dp_menu_p {
   margin: 0;
   font-size: .9rem;
   font-weight: 300;
@@ -855,7 +843,7 @@ footer {
   white-space: nowrap;
 }
 
-.__check {
+.dp_menu_check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -868,22 +856,22 @@ footer {
 }
 
 
-.__card:hover .__check {
+.dp_menu-card:hover .dp_menu_check {
   margin-right: -1rem;
   // transform: translateX(-4rem);
 }
 
-.__card:hover .__check {
+.dp_menu-card:hover .dp_menu_check {
   margin-right: -1rem;
   // transform: translateX(-4rem);
 }
 
-.__check-rotate {
+.dp_menu_check-rotate {
   transform: rotate(180deg);
   transition-duration: .8s;
 }
 
-.__card:hover .__check-rotate{
+.dp_menu-card:hover .dp_menu_check-rotate{
   // animation-delay: .4ms;
   transform: rotate(0);
 
