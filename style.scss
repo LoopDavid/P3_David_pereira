@@ -132,6 +132,10 @@ body {
   overflow: hidden;
   margin: 10px;
 }
+.__card {
+  box-shadow: -1px 5px 5px 0px rgba(0,0,0,0.21);
+  margin: 1rem 0.3rem;
+}
 
 footer {
   .dp_logo-footer {
@@ -189,6 +193,10 @@ footer {
     margin: 10px;
   }
 
+  .__card {
+    box-shadow: -1px 5px 5px 0px rgba(0,0,0,0.21);
+    margin: 1rem 0.3rem;
+  }
   footer {
     height: 20vh;
   }
@@ -215,6 +223,9 @@ footer {
       max-height: 17rem;
     }
 
+    .__card {
+      @include shadow;
+    }
     footer {
 
     }
@@ -543,6 +554,7 @@ footer {
     position: absolute;
     font-size: 1.8rem;
     transition: .4s;
+    cursor: pointer;
 
     }
   }
@@ -754,8 +766,9 @@ footer {
   border-radius: 1rem;
   padding: 1rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   overflow: hidden;
-  @include shadow;
+  cursor: pointer;
   .__price {
     align-self: flex-end;
     margin: 0 auto;
@@ -854,6 +867,11 @@ footer {
   width: 4rem;
 }
 
+
+.__card:hover .__check {
+  margin-right: -1rem;
+  // transform: translateX(-4rem);
+}
 
 .__card:hover .__check {
   margin-right: -1rem;
