@@ -216,7 +216,7 @@ footer {
     }
 
     footer {
-      
+
     }
   }
 
@@ -572,6 +572,10 @@ footer {
      font-weight: bold;
      color: rgb(255,121,218);
      color: linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
+     color: -moz-linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
+     color: -webkit-linear-gradient(10deg, rgba(255,121,218,.5) 0%, rgba(147,86,220,0) 100%);
+
+
      background-color: #FFF;
 
      transition: all 0.6s ease-out;
