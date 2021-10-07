@@ -178,7 +178,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .dp_main-restaurants-bloc-vignette {
     width: 45% !important;
     margin: 10px 10px;
@@ -211,7 +211,6 @@ footer {
   and (max-width: 767px) {
     .fa-map-marker-alt::before {
       height: 50px;
-      margin-left: 30vw;
       margin-right: 15px;
     }
 
@@ -372,8 +371,9 @@ footer {
   .dp_under-header-loc {
     display: flex;
     flex-direction: row;
-    width: 100%;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     background-color: #E0E0E0;
     .dp_under-header-loctxt {
       font-family: 'Roboto';
